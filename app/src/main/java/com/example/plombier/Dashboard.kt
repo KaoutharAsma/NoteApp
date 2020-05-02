@@ -2,7 +2,6 @@ package com.example.plombier
 
 import android.annotation.TargetApi
 import android.content.DialogInterface
-import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -181,12 +180,14 @@ class Dashboard : AppCompatActivity() {
                 datePicker.updateDate(date.year,date.monthValue-1,date.dayOfMonth)
                 dialog.setPositiveButton("modifier") { _: DialogInterface, _: Int ->
                     var intervention = Intervention()
+                    intervention.num = list[p1].num
                     intervention.type = type.selectedItem.toString()
                     intervention.plombier = plombier.selectedItem.toString()
                     val calendar: Calendar = Calendar.getInstance()
                     calendar.set(datePicker.year, datePicker.month, datePicker.dayOfMonth)
                     val sdf = SimpleDateFormat("dd-MM-yyyy")
                     intervention.date = sdf.format(calendar.time)
+
                     doAsync{
                         val list = activity.interventionManager.editIntervention(intervention)
                         uiThread {
