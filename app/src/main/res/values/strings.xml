@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">plombier</string>
+    <string name="title_activity_dashboard">les interventions</string>
+
+
+    <string name="selected_item">Selected item:</string>
+        <string-array name="plumbers">
+            <item>Mohamed</item>
+            <item>Sofiane</item>
+            <item>Ahmed</item>
+            <item>Omar</item>
+            <item>Mustapha</item>
+        </string-array>
+
+    <string-array name="type">
+        <item>dépannage</item>
+        <item>maintenance</item>
+        <item>installation</item>
+    </string-array>
+
+</resources>
