@@ -5,13 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class Intervention{
+class Note{
 
     @PrimaryKey(autoGenerate = true)
     var num:Int = 0
-    var date = ""
-
-    var plombier:String =""
-
-    var type:String = ""
+    var title=""
+    var color:String =""
+    var content:String = ""
 }

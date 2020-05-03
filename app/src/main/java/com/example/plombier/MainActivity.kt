@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             var nom = name.text.toString()
             var typeI = type.text.toString()
             var date = Date()
-            var intervention = Intervention(1,date,nom,typeI)
+            var Note = Note(1,date,nom,typeI)
             var gson = Gson()
-            var jsonString:String = gson.toJson(intervention)
+            var jsonString:String = gson.toJson(Note)
             val file= File(JSON_FILE)
             val fileOutputStream = FileOutputStream(file)
             fileOutputStream.write(jsonString.toByteArray())
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             val bufferedReader: BufferedReader = File(JSON_FILE).bufferedReader()
             val inputString = bufferedReader.use { it.readText() }
-            var post = gson.fromJson(inputString, Intervention::class.java)
+            var post = gson.fromJson(inputString, Note::class.java)
             i.text = post.plombier +"  "+ post.type
         }
 */

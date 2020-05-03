@@ -5,40 +5,31 @@
         android:layout_height="match_parent"
         android:gravity = "center">
 
-    <Spinner
-            android:hint="plombier"
+    <EditText
+            android:hint="title"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginBottom="10dp"
-            android:id="@+id/ev_plombier"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"/>
 
-    <Spinner
-            android:hint="type"
-            android:layout_below="@+id/ev_plombier"
+    <EditText
+            android:hint="content"
+            android:layout_below="@+id/title"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginBottom="10dp"
-            android:id="@+id/ev_type"
+            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
     />
 
-    <DatePicker
 
-            android:calendarTextColor="@android:color/white"
-            android:layout_below="@+id/ev_type"
-            android:id="@+id/dp_interventions"
-            android:datePickerMode="spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false"
-    />
 
 
 </RelativeLayout>

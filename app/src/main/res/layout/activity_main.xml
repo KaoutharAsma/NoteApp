@@ -8,7 +8,7 @@
         tools:context=".MainActivity">
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/plumber"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_note"
             android:id="@+id/logo" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
